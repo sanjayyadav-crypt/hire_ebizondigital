@@ -837,6 +837,137 @@ h2.light em { color: #93c5fd; }
 }
 .creme-consult a:hover { color: #93c5fd; text-decoration: underline; }
 
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+
+.live-chat-sticky{
+    position: fixed;
+    left: -50px;
+    top: 50%;
+    transform: rotate(-90deg);
+    z-index: 9999;
+    background: #000;
+    color: #fff;
+    padding: 12px 22px;
+    border-radius: 0px 0px 10px 10px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+    transition: 0.3s ease;
+}
+
+.live-chat-sticky:hover{
+    background: #ff6b00;
+}
+
+.live-chat-banner{
+    width:100%;
+    background:#000;
+    position:fixed;
+    top:-100%;
+    left:0;
+    z-index:999999;
+    padding:28px 20px 18px;
+    text-align:center;
+    box-sizing:border-box;
+    transition:0.5s ease;
+    height:auto;
+}
+.live-chat-banner .live-chat-inner{
+    max-width:480px;
+    margin:0 auto;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+.live-chat-banner.show{
+    top:0;
+}
+
+.live-chat-inner img{
+    width:72px;
+    height:72px;
+    border-radius:50%;
+    object-fit:cover;
+    /* margin-bottom:14px; */
+}
+
+.live-chat-inner h2{
+    color:#fff;
+    font-size:25px;
+    font-weight:700;
+    margin:0;
+    letter-spacing:0.5px;
+    font-family:Arial,sans-serif;
+}
+
+.live-chat-inner p{
+    color:#fff;
+    font-size:18px;
+    /* margin-top:16px; */
+    margin-bottom:10px;
+    font-family:Arial,sans-serif;
+}
+
+.live-chat-btns{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+.live-chat-btns a{
+    text-decoration:none;
+    padding:14px 26px;
+    border-radius:40px;
+    font-size:15px;
+    font-weight:500;
+    font-family:Arial,sans-serif;
+    transition:0.3s;
+}
+
+.start-btn{
+    background:#f5ab2f;
+    color:#fff;
+}
+
+.no-btn{
+    background:#55555f;
+    color:#fff;
+}
+
+.start-btn:hover{
+    background:#e69b1d;
+}
+
+.no-btn:hover{
+    background:#666;
+}
+
+
+
+@media(max-width:768px){
+
+    .live-chat-inner h2{
+        font-size:22px;
+    }
+
+    .live-chat-inner p{
+        font-size:15px;
+    }
+
+    .live-chat-btns a{
+        font-size:15px;
+        padding:12px 20px;
+    }
+
+    body{
+        padding-top:250px;
+    }
+}
+
 /* ── Responsive ───────────────────────────────────────────────────── */
 @media (max-width: 1024px) {
   .nav-phone { display: none; }

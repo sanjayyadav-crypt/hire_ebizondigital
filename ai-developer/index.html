@@ -27,6 +27,28 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
+<div class="live-chat-banner" id="liveChatBanner">
+    <div class="live-chat-inner">
+        
+        <img src="https://static.intercomassets.com/avatars/2113949/square_128/custom_avatar-1604047472.png" alt="Agent">
+
+        <h2>LIVE CHAT - ONLINE NOW</h2>
+
+        <p>Hi, we are here to help if you have questions.</p>
+
+        <div class="live-chat-btns">
+            <a href="javascript:void(0)" onclick="window.Intercom && window.Intercom('show')" class="start-btn">
+                Yes , Start Now
+            </a>
+
+            <a href="javascript:void(0)" class="no-btn" onclick="document.getElementById('liveChatBanner').style.display='none'">
+                No, Thanks
+            </a>
+        </div>
+
+    </div>
+</div>
+
 <!-- ══ NAVBAR ═══════════════════════════════════════════════════════════ -->
 <header id="navbar">
   <div class="nav-inner">
@@ -645,6 +667,10 @@ chain = RetrievalQA.from_chain_type(
 
 <!-- Toast -->
 <div id="toast">✅ Thanks! We'll be in touch within 24 hours.</div>
+
+ <a href="javascript:void(0)" class="live-chat-sticky" onclick="window.Intercom && window.Intercom('show')">
+    💬 Live Chat
+</a>
 
 <script src="script.js"></script>
 </body>

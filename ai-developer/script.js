@@ -69,3 +69,13 @@ new IntersectionObserver(([e]) => {
     });
   }
 }, { threshold: 0.5 }).observe(document.querySelector('.stats-band'));
+
+
+// chat widget banner - show after 500ms, then hide after 10s if not clicked
+window.addEventListener("load", function(){
+
+    setTimeout(function(){
+        document.getElementById("liveChatBanner").classList.add("show");
+    }, 500);
+
+});
