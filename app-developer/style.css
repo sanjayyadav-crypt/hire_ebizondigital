@@ -1781,6 +1781,8 @@ button {
 }
 .live-chat-banner.show{
     top:0;
+    transform: translateY(0);
+    pointer-events: all;
 }
 
 .live-chat-inner img{

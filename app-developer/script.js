@@ -108,10 +108,37 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // chat widget banner - show after 500ms, then hide after 10s if not clicked
-window.addEventListener("load", function(){
+window.addEventListener("DOMContentLoaded", function () {
 
-    setTimeout(function(){
-        document.getElementById("liveChatBanner").classList.add("show");
+    const banner = document.getElementById("liveChatBanner");
+    let bannerClosed = false;
+    let bannerShown = false;
+
+    setTimeout(function () {
+        banner.classList.add("show");
     }, 500);
+
+    window.closeBanner = function () {
+        banner.classList.remove("show");
+        bannerClosed = true;
+        bannerShown = true; 
+    };
+
+    window.addEventListener("scroll", function () {
+        let scrollTop = window.scrollY;
+        let windowHeight = window.innerHeight;
+        let documentHeight = document.documentElement.scrollHeight;
+        let scrollPercent = ((scrollTop + windowHeight) / documentHeight) * 100;
+
+        if (scrollPercent < 75) {
+            bannerShown = false;
+        }
+
+        if (scrollPercent >= 75 && bannerClosed && !bannerShown) {
+            // banner.style.display = "block";
+            bannerShown = true;
+            banner.classList.add("show");
+        }
+    });
 
 });
