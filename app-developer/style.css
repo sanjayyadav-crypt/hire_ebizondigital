@@ -1755,7 +1755,8 @@ button {
 }
 
 .live-chat-sticky:hover{
-    background: #ff6b00;
+    background: #fff;
+    color: #4769f1;
 }
 
 .live-chat-banner{
@@ -1801,7 +1802,7 @@ button {
 
 .live-chat-inner p{
     color:#fff;
-    font: size 15px;px;
+    font-size:15px;
     /* margin-top:16px; */
     margin-bottom:10px;
     font-family:Arial,sans-serif;
@@ -1825,7 +1826,7 @@ button {
 }
 
 .start-btn{
-    background:#f5ab2f;
+    background:#4769f1;
     color:#fff;
 }
 
@@ -1835,7 +1836,8 @@ button {
 }
 
 .start-btn:hover{
-    background:#e69b1d;
+    background:#fff;
+    color:#4769f1;
 }
 
 .no-btn:hover{

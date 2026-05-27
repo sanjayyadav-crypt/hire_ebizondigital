@@ -859,7 +859,8 @@ h2.light em { color: #93c5fd; }
 }
 
 .live-chat-sticky:hover{
-    background: #ff6b00;
+    background: #fff;
+    color: #4769f1;
 }
 
 .live-chat-banner{
@@ -929,7 +930,7 @@ h2.light em { color: #93c5fd; }
 }
 
 .start-btn{
-    background:#f5ab2f;
+    background:#4769f1;
     color:#fff;
 }
 
@@ -939,7 +940,8 @@ h2.light em { color: #93c5fd; }
 }
 
 .start-btn:hover{
-    background:#e69b1d;
+    background:#fff;
+    color:#4769f1;
 }
 
 .no-btn:hover{
