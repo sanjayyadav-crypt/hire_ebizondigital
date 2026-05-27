@@ -78,9 +78,23 @@ window.addEventListener("DOMContentLoaded", function () {
     let bannerClosed = false;
     let bannerShown = false;
 
-    setTimeout(function () {
+   
+    // Show banner on exit-intent (mouse leaves viewport toward top)
+    function showBannerExitIntent() {
+        if (bannerClosed || bannerShown) return;
         banner.classList.add("show");
-    }, 500);
+        bannerShown = true;
+    }
+
+    function onMouseOut(e) {
+        e = e || window.event;
+        const from = e.relatedTarget || e.toElement;
+        if (!from && e.clientY <= 0) {
+            showBannerExitIntent();
+            document.removeEventListener('mouseout', onMouseOut);
+        }
+    }
+    document.addEventListener('mouseout', onMouseOut);
 
     window.closeBanner = function () {
         banner.classList.remove("show");
