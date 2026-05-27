@@ -848,7 +848,7 @@ h2.light em { color: #93c5fd; }
     top: 50%;
     transform: rotate(-90deg);
     z-index: 9999;
-    background: #000;
+    background: #4769f1;
     color: #fff;
     padding: 12px 22px;
     border-radius: 0px 0px 10px 10px;
@@ -961,10 +961,6 @@ h2.light em { color: #93c5fd; }
     .live-chat-btns a{
         font-size:15px;
         padding:12px 20px;
-    }
-
-    body{
-        padding-top:250px;
     }
 }
 
