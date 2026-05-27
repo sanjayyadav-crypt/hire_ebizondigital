@@ -1792,7 +1792,7 @@ button {
 
 .live-chat-inner h2{
     color:#fff;
-    font-size:25px;
+    font-size:30px;
     font-weight:700;
     margin:0;
     letter-spacing:0.5px;
@@ -1801,7 +1801,7 @@ button {
 
 .live-chat-inner p{
     color:#fff;
-    font-size:18px;
+    font: size 15px;px;
     /* margin-top:16px; */
     margin-bottom:10px;
     font-family:Arial,sans-serif;
@@ -1816,7 +1816,7 @@ button {
 
 .live-chat-btns a{
     text-decoration:none;
-    padding:14px 26px;
+    padding:10px 26px;
     border-radius:40px;
     font-size:15px;
     font-weight:500;
