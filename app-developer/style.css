@@ -1761,7 +1761,7 @@ button {
 
 .live-chat-banner{
     width:100%;
-    background:#000;
+    background: linear-gradient(180deg, #1E3A8A 0%, #3B82F6 100%);
     position:fixed;
     top:-100%;
     left:0;
@@ -1828,8 +1828,8 @@ button {
 }
 
 .start-btn{
-    background:#4769f1;
-    color:#fff;
+    background:white;
+    color:black;
 }
 
 .no-btn{
