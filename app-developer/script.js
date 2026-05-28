@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// chat widget banner - show after 500ms, then hide after 10s if not clicked
+// chat widget banner logic - shows on exit intent and when user scrolls back up after passing 75% of the page. Disappears when user clicks close or scrolls back up before 75%.
 window.addEventListener("DOMContentLoaded", function () {
 
     const banner = document.getElementById("liveChatBanner");
