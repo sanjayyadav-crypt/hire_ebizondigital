@@ -120,3 +120,37 @@ window.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const params = new URLSearchParams(window.location.search);
+
+  // UTM Fields
+  const utmSource = params.get("utm_source") || "";
+  const utmCampaign = params.get("utm_campaign") || "";
+
+  // Landing Page
+  const landingPage = window.location.href;
+
+  // Set UTM + landing page fields right away
+  document.getElementById("hidden-source").value = utmSource;
+  document.getElementById("hidden-campaign").value = utmCampaign;
+  document.getElementById("hidden-landing-page").value = landingPage;
+
+  // Get IP + Location from ipwho.is (CORS-friendly, free)
+  fetch("https://ipwho.is/")
+    .then(res => res.json())
+    .then(geo => {
+      // Set IP
+      document.getElementById("hidden-ip-address").value = geo.ip || "Unavailable";
+
+      // Build location string from available fields
+      const parts = [geo.city, geo.region, geo.country].filter(Boolean);
+      const locationString = parts.join(", ");
+      document.getElementById("hidden-location").value = locationString || "Unknown";
+    })
+    .catch(err => {
+      console.error("Geo lookup failed:", err);
+      document.getElementById("hidden-ip-address").value = "Unavailable";
+      document.getElementById("hidden-location").value = "Unknown";
+    });
+});
