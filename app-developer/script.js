@@ -88,23 +88,7 @@ document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("hidden-campaign").value = utmCampaign;
   document.getElementById("hidden-landing-page").value = landingPage;
 
-  // Get IP + Location from ipwho.is (CORS-friendly, free)
-  fetch("https://ipwho.is/")
-    .then(res => res.json())
-    .then(geo => {
-      // Set IP
-      document.getElementById("hidden-ip-address").value = geo.ip || "Unavailable";
-
-      // Build location string from available fields
-      const parts = [geo.city, geo.region, geo.country].filter(Boolean);
-      const locationString = parts.join(", ");
-      document.getElementById("hidden-location").value = locationString || "Unknown";
-    })
-    .catch(err => {
-      console.error("Geo lookup failed:", err);
-      document.getElementById("hidden-ip-address").value = "Unavailable";
-      document.getElementById("hidden-location").value = "Unknown";
-    });
+  
 });
 
 // chat widget banner logic - shows on exit intent and when user scrolls back up after passing 75% of the page. Disappears when user clicks close or scrolls back up before 75%.
