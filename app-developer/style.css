@@ -1679,7 +1679,7 @@ button {
 /* ── Back to top ── */
 #backTop {
   position: fixed;
-  bottom: 28px;
+  bottom: 80px;
   right: 28px;
   width: 42px;
   height: 42px;
