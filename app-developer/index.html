@@ -888,6 +888,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 required></textarea>
             </div>
 
+
+             <input type="hidden" id="hidden-source" name="fields[utm_source]" value="">
+          <input type="hidden" id="hidden-campaign" name="fields[utm_campaign]" value="">
+          <input type="hidden" id="hidden-landing-page" name="fields[landing_page]" value="">
+          
             <input type="submit" class="btn btn-primary btn-full" value="Send Message →">
             <p class="form-note">🔒 100% confidential. We sign NDA. No spam, ever.</p>
           </form>
@@ -948,6 +953,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div id="toast">✅ Message sent! We'll be in touch within 2 hours.</div>
 
   <script src="script.js"></script>
+  <script>
+     <!-- hidden fields -->
+
+    document.addEventListener("DOMContentLoaded", function () {
+  const params = new URLSearchParams(window.location.search);
+
+  // UTM Fields
+  const utmSource = params.get("utm_source") || "";
+  const utmCampaign = params.get("utm_campaign") || "";
+
+  // Landing Page
+  const landingPage = window.location.href;
+
+  // Set UTM + landing page fields right away for top form
+  document.getElementById("hidden-source").value = utmSource;
+  document.getElementById("hidden-campaign").value = utmCampaign;
+  document.getElementById("hidden-landing-page").value = landingPage;
+
+});
+
+  </script>
 </body>
 
 </html>
