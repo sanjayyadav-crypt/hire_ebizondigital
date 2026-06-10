@@ -2010,14 +2010,6 @@
   </footer>
 
   <script>
-    function handleSubmit(btn) {
-      btn.textContent = '✓ Submitted!';
-      btn.style.background = '#27AE60';
-      setTimeout(() => {
-        btn.textContent = btn.classList.contains('form-submit') ? 'Send My Free Quote →' : 'Get a Free Quote →';
-        btn.style.background = '';
-      }, 3000);
-    }
 
     document.querySelectorAll('.faq-q').forEach(q => {
       q.addEventListener('click', () => {
