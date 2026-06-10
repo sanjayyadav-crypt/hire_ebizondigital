@@ -41,6 +41,7 @@
       --accent: #00C2FF;
       --font-display: 'Plus Jakarta Sans', sans-serif;
       --font-body: 'DM Sans', sans-serif;
+      --blue: #2563eb;
     }
 
     html {
@@ -57,18 +58,17 @@
 
     /* NAV */
     nav {
-      position: fixed;
       top: 0;
       left: 0;
       right: 0;
-      z-index: 100;
+      z-index: 1000;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      background: #0b0f1a;
       padding: 0.9rem 5%;
-      background: rgba(0, 0, 0, 0.96);
       backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
     }
 
     .logo {
@@ -78,12 +78,10 @@
       color: #FFF;
       text-decoration: none;
       letter-spacing: -0.02em;
+      filter: brightness(0) invert(1);
     }
 
 
-    .logo span {
-      color: var(--yellow);
-    }
 
     .nav-links {
       display: flex;
@@ -103,7 +101,7 @@
     }
 
     .nav-phone {
-      color: var(--yellow);
+      color: var(--hero-muted);
       font-weight: 600;
       font-size: 0.875rem;
       text-decoration: none;
@@ -118,8 +116,8 @@
     }
 
     .nav-cta {
-      background: var(--yellow);
-      color: var(--hero-bg);
+      background: #2563eb;
+      color: white;
       font-family: var(--font-display);
       font-weight: 700;
       font-size: 0.875rem;
@@ -130,7 +128,7 @@
     }
 
     .nav-cta:hover {
-      background: var(--yellow-dark);
+      background: #1e53c4;
       transform: translateY(-1px);
     }
 
@@ -150,7 +148,7 @@
       font-weight: 600;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: var(--yellow-dark);
+      color: #2563eb;
       margin-bottom: 0.75rem;
     }
 
@@ -172,8 +170,8 @@
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
-      background: var(--yellow);
-      color: var(--hero-bg);
+      background: #2563eb;
+      color: white;
       font-family: var(--font-display);
       font-weight: 700;
       font-size: 0.95rem;
@@ -181,7 +179,7 @@
       border-radius: 8px;
       text-decoration: none;
       transition: transform 0.15s, box-shadow 0.2s;
-      box-shadow: 0 4px 20px rgba(245, 166, 35, 0.35);
+      box-shadow: 0 4px 5px #2563eb;
       border: none;
       cursor: pointer;
     }
@@ -195,7 +193,7 @@
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
-      border: 2px solid var(--yellow);
+      border: 2px solid #2563eb;
       color: var(--yellow-dark);
       font-family: var(--font-display);
       font-weight: 700;
@@ -209,7 +207,7 @@
     }
 
     .btn-outline-dark:hover {
-      background: var(--yellow);
+      background: #2563eb;
       color: var(--hero-bg);
     }
 
@@ -276,7 +274,7 @@
     .form-white input:focus,
     .form-white select:focus,
     .form-white textarea:focus {
-      border-color: var(--yellow);
+      border-color: #2563eb;
       box-shadow: 0 0 0 3px rgba(245, 166, 35, 0.13);
     }
 
@@ -287,8 +285,8 @@
 
     .form-white .form-submit {
       width: 100%;
-      background: var(--yellow);
-      color: var(--hero-bg);
+      background: #2563eb;
+      color: white;
       font-family: var(--font-display);
       font-weight: 700;
       font-size: 0.95rem;
@@ -322,9 +320,8 @@
 
     /* HERO */
     .sec-hero {
-      background: var(--hero-bg);
+      background: linear-gradient(160deg, #0f1829 0%, #0f1829 55%, #111827 100%);;
       color: #FFF;
-      min-height: 100vh;
       display: flex;
       align-items: center;
       padding: 110px 5% 70px;
@@ -397,7 +394,7 @@
 
     h1 em {
       font-style: normal;
-      color: var(--yellow);
+      color: #2563eb;
     }
 
     .hero-sub {
@@ -420,7 +417,7 @@
       display: inline-flex;
       align-items: center;
       gap: 0.6rem;
-      color: var(--yellow);
+      color: var(--hero-muted);
       font-weight: 600;
       font-size: 1.05rem;
       text-decoration: none;
@@ -448,7 +445,7 @@
     }
 
     .stat-num span {
-      color: var(--yellow);
+      color: #2563eb;
     }
 
     .stat-label {
@@ -492,17 +489,17 @@
       display: flex;
       align-items: center;
       gap: 0.5rem;
-      background: var(--yellow-light);
-      border: 1px solid rgba(245, 166, 35, 0.3);
+      background: var(--iceblue);
+      border: 1px solid var(--iceblue);
       border-radius: 7px;
       padding: 0.5rem 0.85rem;
       margin-bottom: 0.9rem;
       font-size: 0.8rem;
-      color: var(--yellow-dark);
+      color: var(--iceblue-text);
     }
 
     .card-phone-note a {
-      color: var(--yellow-dark);
+      color: var(--iceblue-text);
       font-weight: 700;
       text-decoration: none;
     }
@@ -549,28 +546,28 @@
 
     /* WHY US — cream */
     .sec-why {
-      background: var(--cream);
+      background: var(--iceblue);
       color: var(--cream-text);
     }
 
     .sec-why .section-sub {
       font-size: 1rem;
-      color: var(--cream-muted);
+      color: var(--iceblue-text);
       max-width: 560px;
       line-height: 1.75;
       margin-bottom: 3rem;
     }
 
     .sec-why .section-tag {
-      color: var(--yellow-dark);
+      color: black;
     }
 
     .sec-why h2 {
-      color: var(--cream-text);
+      color: black;
     }
 
     .sec-why h2 em {
-      color: var(--yellow-dark);
+      color: var(--blue);
     }
 
     .why-grid {
@@ -595,7 +592,7 @@
     .why-icon {
       width: 50px;
       height: 50px;
-      background: var(--yellow-light);
+      background: var(--iceblue);
       border-radius: 12px;
       display: flex;
       align-items: center;
@@ -608,19 +605,19 @@
       font-family: var(--font-display);
       font-weight: 700;
       font-size: 1rem;
-      color: var(--cream-text);
+      color: var(--iceblue-text);
       margin-bottom: 0.55rem;
     }
 
     .why-card p {
       font-size: 0.875rem;
-      color: var(--cream-muted);
+      color: var(--hero-muted);
       line-height: 1.7;
     }
 
     /* SERVICES — iceblue */
     .sec-services {
-      background: var(--iceblue);
+      background: white;
       color: var(--iceblue-text);
     }
 
@@ -633,7 +630,7 @@
     }
 
     .sec-services h2 em {
-      color: var(--yellow);
+      color: #2563eb;
     }
 
     .sec-services .section-sub {
@@ -698,8 +695,8 @@
     .service-tag {
       display: inline-block;
       margin-top: 1.25rem;
-      background: var(--yellow-light);
-      color: var(--yellow-dark);
+      background: var(--iceblue);
+      color: black;
       font-size: 0.72rem;
       font-weight: 700;
       padding: 0.3rem 0.8rem;
@@ -708,25 +705,25 @@
 
     /* PROCESS — cream */
     .sec-process {
-      background: var(--cream);
-      color: var(--cream-text);
+      background: white;
+      color: var(--iceblue-text);
     }
 
     .sec-process .section-tag {
-      color: var(--yellow-dark);
+      color: var(--iceblue-text);
     }
 
     .sec-process h2 {
-      color: var(--cream-text);
+      color: black;
     }
 
     .sec-process h2 em {
-      color: var(--yellow-dark);
+      color: var(--blue);
     }
 
     .sec-process .section-sub {
       font-size: 1rem;
-      color: var(--cream-muted);
+      color: var(--iceblue-text);
       max-width: 560px;
       line-height: 1.75;
       margin-bottom: 3.5rem;
@@ -746,7 +743,7 @@
       left: 10%;
       right: 10%;
       height: 2px;
-      background: linear-gradient(90deg, transparent, var(--yellow), transparent);
+      background: linear-gradient(90deg, transparent, #2563eb, transparent);
     }
 
     .process-step {
@@ -759,8 +756,8 @@
     .step-num {
       width: 56px;
       height: 56px;
-      background: var(--cream);
-      border: 2px solid var(--yellow);
+      background: var(--iceblue);
+      border: 2px solid #2563eb;
       border-radius: 50%;
       display: flex;
       align-items: center;
@@ -768,7 +765,7 @@
       font-family: var(--font-display);
       font-weight: 800;
       font-size: 1.1rem;
-      color: var(--yellow-dark);
+      color: #2563eb;
       margin: 0 auto 1.25rem;
     }
 
@@ -776,13 +773,13 @@
       font-family: var(--font-display);
       font-weight: 700;
       font-size: 0.9rem;
-      color: var(--cream-text);
+      color: var(--iceblue-text);
       margin-bottom: 0.5rem;
     }
 
     .process-step p {
       font-size: 0.8rem;
-      color: var(--cream-muted);
+      color: var(--iceblue-text);
       line-height: 1.6;
     }
 
@@ -801,7 +798,7 @@
     }
 
     .sec-stack h2 em {
-      color: var(--yellow);
+      color: var(--blue);
     }
 
     .sec-stack .section-sub {
@@ -847,25 +844,25 @@
 
     /* TESTIMONIALS — cream */
     .sec-testimonials {
-      background: var(--cream);
+      background: var(--blue);
       color: var(--cream-text);
     }
 
     .sec-testimonials .section-tag {
-      color: var(--yellow-dark);
+      color: white;
     }
 
     .sec-testimonials h2 {
-      color: var(--cream-text);
+      color: white;
     }
 
     .sec-testimonials h2 em {
-      color: var(--yellow-dark);
+      color: white;
     }
 
     .sec-testimonials .section-sub {
       font-size: 1rem;
-      color: var(--cream-muted);
+      color: white;
       max-width: 560px;
       line-height: 1.75;
       margin-bottom: 3rem;
@@ -898,7 +895,7 @@
 
     .testimonial-text {
       font-size: 0.9rem;
-      color: var(--cream-muted);
+      color: var(--hero-muted);
       line-height: 1.8;
       margin-bottom: 1.5rem;
       font-style: italic;
@@ -929,12 +926,12 @@
       font-family: var(--font-display);
       font-weight: 700;
       font-size: 0.9rem;
-      color: var(--cream-text);
+      color: black;
     }
 
     .author-role {
       font-size: 0.75rem;
-      color: var(--cream-muted);
+      color: var(--hero-muted);
     }
 
     /* PRICING — iceblue */
@@ -952,7 +949,7 @@
     }
 
     .sec-pricing h2 em {
-      color: var(--yellow);
+      color: var(--blue);
     }
 
     .sec-pricing .section-sub {
@@ -985,7 +982,7 @@
     }
 
     .pricing-card.featured {
-      border: 2px solid var(--yellow);
+      border: 2px solid var(--blue);
     }
 
     .pricing-badge {
@@ -1051,7 +1048,7 @@
 
     .pricing-features li::before {
       content: '✓';
-      color: var(--yellow-dark);
+      color: var(--blue);
       font-weight: 800;
       flex-shrink: 0;
       font-size: 0.95rem;
@@ -1070,45 +1067,45 @@
     }
 
     .pricing-cta.outline {
-      border: 2px solid var(--yellow);
-      color: var(--yellow-dark);
+      border: 2px solid var(--blue);
+      color: black;
     }
 
     .pricing-cta.outline:hover {
-      background: var(--yellow);
-      color: var(--hero-bg);
+      background: var(--blue);
+      color: white;
     }
 
     .pricing-cta.solid {
-      background: var(--yellow);
-      color: var(--hero-bg);
+      background: var(--blue);
+      color: white;
     }
 
     .pricing-cta.solid:hover {
-      background: var(--yellow-dark);
+      background: transparent;
+      color: black;
     }
 
     /* FAQ — cream */
     .sec-faq {
-      background: var(--cream);
-      color: var(--cream-text);
+      background: white;
     }
 
     .sec-faq .section-tag {
-      color: var(--yellow-dark);
+      color: var(--iceblue-text);
     }
 
     .sec-faq h2 {
-      color: var(--cream-text);
+      color: black;
     }
 
     .sec-faq h2 em {
-      color: var(--yellow-dark);
+      color: var(--blue);
     }
 
     .sec-faq .section-sub {
       font-size: 1rem;
-      color: var(--cream-muted);
+      color: var(--iceblue-text);
       max-width: 560px;
       line-height: 1.75;
       margin-bottom: 3rem;
@@ -1137,7 +1134,7 @@
       font-family: var(--font-display);
       font-weight: 600;
       font-size: 0.95rem;
-      color: var(--cream-text);
+      color: var(--iceblue-text);
       user-select: none;
       gap: 1rem;
     }
@@ -1146,13 +1143,13 @@
       width: 28px;
       height: 28px;
       border-radius: 50%;
-      background: var(--yellow-light);
-      border: 1px solid var(--yellow);
+      background: var(--iceblue);
+      border: 1px solid var(--blue);
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 1.1rem;
-      color: var(--yellow-dark);
+      color: var(--blue);
       flex-shrink: 0;
       transition: transform 0.2s, background 0.2s;
       font-weight: 700;
@@ -1208,7 +1205,7 @@
     }
 
     .sec-contact h2 em {
-      color: var(--yellow);
+      color: var(--blue);
     }
 
     .sec-contact .section-sub {
@@ -1249,7 +1246,7 @@
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
-      color: var(--yellow);
+      color: var(--hero-muted);
       font-weight: 700;
       font-size: 1.1rem;
       text-decoration: none;
@@ -1265,7 +1262,7 @@
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
-      color: var(--yellow);
+      color: var(--hero-muted);
       font-weight: 600;
       font-size: 0.9rem;
       text-decoration: none;
@@ -1296,9 +1293,8 @@
 
     /* CTA BANNER */
     .cta-banner {
-      background: linear-gradient(135deg, #FFF8D9 0%, #fffae8 60%, #eef5fc 100%);
-      border-top: 2px solid var(--yellow);
-      border-bottom: 2px solid var(--yellow);
+      background: white;
+      border-bottom: 2px solid var(--hero-muted);
       padding: 5rem 5%;
       text-align: center;
       position: relative;
@@ -1315,19 +1311,19 @@
 
     .cta-banner h2 {
       font-size: clamp(1.8rem, 3vw, 2.7rem);
-      color: var(--cream-text);
+      color: black;
       margin-bottom: 1rem;
       position: relative;
       z-index: 1;
     }
 
     .cta-banner h2 em {
-      color: var(--yellow-dark);
+      color: var(--blue);
       font-style: normal;
     }
 
     .cta-banner p {
-      color: var(--cream-muted);
+      color: var(--hero-muted);
       margin-bottom: 2rem;
       font-size: 1rem;
       position: relative;
@@ -1348,7 +1344,7 @@
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
-      color: var(--yellow-dark);
+      color: var(--hero-muted);
       font-family: var(--font-display);
       font-weight: 700;
       font-size: 1rem;
@@ -1381,6 +1377,7 @@
       font-family: var(--font-display);
       font-weight: 800;
       font-size: 1.1rem;
+      filter: brightness(0) invert(1);
     }
 
     .footer-logo span {
@@ -1449,13 +1446,23 @@
     }
 
     @media(max-width: 900px) {
-
+      .logo{
+        width: 50%;
+      }
+      .logo img{
+        width: 100%;
+      }
+      .sec-hero{
+        padding-top: 50px;
+      }
       .hero-grid,
       .contact-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
       }
-
+      .clients-label{
+        font-size: 25px;
+      }
       .why-grid,
       .services-grid,
       .testimonials-grid,
@@ -1916,7 +1923,7 @@
 
           <h3>Email Us</h3>
           <p>We respond to all inquiries within 4 business hours.</p>
-          <a class="contact-email" href="mailto:hello@databipro.com">✉️ hello@databipro.com</a>
+          <a class="contact-email" href="mailto:hello@ebizondigital.com">✉️ hello@ebizondigital.com</a>
 
           <h3>What Happens Next?</h3>
           <p>After you submit, our team reviews your requirements, shortlists the best-fit developers, and schedules a
