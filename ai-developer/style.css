@@ -265,9 +265,6 @@ h2.light em {
   width: auto;
 }
 
-.logo-img-light {
-  filter: brightness(0) invert(1);
-}
 
 .nav-links {
   display: flex;
