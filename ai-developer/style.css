@@ -612,9 +612,9 @@ h2.light em {
 }
 
 .trust-label {
-  font-size: .78rem;
-  color: var(--muted);
-  text-transform: uppercase;
+  font-size: 45px;
+  color: black;
+  font-weight: bold;
   letter-spacing: .07em;
   margin-bottom: 14px;
 }
